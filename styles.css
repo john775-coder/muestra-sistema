@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2b3b47;
+    color: white;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Espacia los logos y los íconos */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    height: 90px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* Centra los íconos dentro del contenedor */
+    gap: 30px; /* Espacio entre los íconos */
+    width: auto;
+}
+
+.icon {
+    height: 30px; /* Ajusta el tamaño de los íconos */
+}
+
+.container {
+    display: grid;
+    gap: 20px; /* Espacio entre las secciones */
+    margin: 30px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para las tarjetas */
+    gap: 10px; /* Espacio entre las tarjetas */
+}
+
+.card {
+    background-color: #2b3b47;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    padding: 10px 10px 0 10px; /* Quita el padding inferior para evitar desalineaciones */
+    text-align: center;
+    height: 150px; /* Altura fija para todas las tarjetas */
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Para apilar el contenido verticalmente */
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    position: relative; /* Para posicionar el h3 relativo a la tarjeta */
+}
+
+.card h3 {
+    background-color: #ffcc00; /* Color del rectángulo */
+    width: 94%; /* Ocupa todo el ancho de la tarjeta incluyendo el padding */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    position: absolute; /* Posiciona el h3 en la parte superior */
+    top: 0; /* Se alinea en la parte superior */
+    left: 0; /* Se alinea a la izquierda */
+}
+
+.campo-a {
+    background-image: url('img/grafico01.jpg'); /* Imagen de fondo para Producción Campo A */
+    background-size: cover; /* Hace que la imagen cubra toda la tarjeta */
+    color: white; /* Asegura que el texto sea legible */
+}
+
+.status {
+    background-image: url('img/circular02.jpg'); /* Cambia esta ruta por la imagen que deseas usar */
+    background-size: cover; /* Asegúrate de que la imagen cubra toda la tarjeta */
+    background-position: center; /* Centra la imagen de fondo */
+    color: white; /* Asegura que el texto sea legible */
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Para apilar el contenido verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.map {
+    background-image: url('img/mapa01.jpg'); /* Imagen de fondo para el mapa */
+    background-size: cover; /* Hace que la imagen cubra toda la tarjeta */
+    color: white; /* Asegura que el texto sea legible */
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.main-value {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.comment {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+#map {
+    text-align: center; /* Centra la imagen en su contenedor */
+    margin: 0 auto;
+    width: 100%; /* Haz que la imagen sea responsiva */
+    max-width: 600px; /* Limita el tamaño máximo de la imagen */
+}
+
+#map img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Agrega bordes redondeados si es necesario */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b3b47;
+    border-top: 2px solid #ffcc00;
+    color: #aaa;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .section {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+
+    .icon-container {
+        gap: 15px; /* Reduce el espacio entre íconos en tablets */
+    }
+
+    .card {
+        height: auto; /* Altura automática para permitir contenido dinámico */
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        grid-template-columns: 1fr; /* 1 columna en dispositivos móviles */
+    }
+
+    .header-icons {
+        flex-direction: row; /* Apila los logos y los íconos verticalmente en móviles */
+        height: auto;
+    }
+
+    .icon-container {
+        justify-content: space-around; /* Espacia los íconos en móviles */
+        gap: 10px; /* Reduce aún más el espacio entre íconos en móviles */
+        flex-wrap: wrap; /* Permite que los íconos ocupen múltiples líneas si es necesario */
+    }
+
+    .logo, .icon {
+        height: 40px; /* Reduce el tamaño de los logos e íconos en móviles */
+    }
+}
+
+
+
+
+
+
+
